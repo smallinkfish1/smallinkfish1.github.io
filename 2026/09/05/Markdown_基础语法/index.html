@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha256-4Lad8m4ZWW1Lgb9+sMVLYEfnIh7BjV1NQMEe79Pviks=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Markdown 基础语法完全指南（中英双语） Complete Basic Markdown Syntax Guide (Chinese &amp; English) 本文整理全部通用 Markdown 基础语法，所有示例均可直接复制到博客使用，适配绝大多数主题渲染。 This article sorts out all basic Markdown syntax. All examples c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown 基础语法（中英双语）">
+<meta property="og:url" content="http://example.com/2026/09/05/Markdown_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="Hexo Website">
+<meta property="og:description" content="Markdown 基础语法完全指南（中英双语） Complete Basic Markdown Syntax Guide (Chinese &amp; English) 本文整理全部通用 Markdown 基础语法，所有示例均可直接复制到博客使用，适配绝大多数主题渲染。 This article sorts out all basic Markdown syntax. All examples c">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-09-05T13:00:00.000Z">
+<meta property="article:modified_time" content="2026-09-06T04:51:46.668Z">
+<meta property="article:author" content="small_inkfish">
+<meta property="article:tag" content="Notes">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2026/09/05/Markdown_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2026/09/05/Markdown_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/","path":"2026/09/05/Markdown_基础语法/","title":"Markdown 基础语法（中英双语）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Markdown 基础语法（中英双语） | Hexo Website</title>
+  
+
+
+
+
+
+
+
+
+  
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","display_overflow":"scroll","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-mml-chtml.js","integrity":"sha256-ihPtDDm7pTmSF9ViEsItlvsrBTsNkz0MOXMchzOwCQw="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/3.0.2/quicklink.umd.js" integrity="sha256-Qo2BTvlsBVXIr5fEHp8xlBpUmkbDINr5cQZeSfMTES8=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://example.com/2026/09/05/Markdown_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-search popup-trigger" aria-label="搜索" role="button">
+      <i class="fa fa-search fa-fw fa-lg"></i>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo Website</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Created by Hexo</p>
+  </div>
+
+  <div class="site-nav-toggle" aria-label="切换导航栏" role="button">
+      <i class="fa fa-ellipsis fa-fw fa-lg"></i>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-layer-group fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  
+  <template id="search-popup-template"><div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div></template>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD"><span class="nav-number">1.</span> <span class="nav-text">Markdown
+基础语法完全指南（中英双语）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#complete-basic-markdown-syntax-guide-chinese-english"><span class="nav-number">2.</span> <span class="nav-text">Complete
+Basic Markdown Syntax Guide (Chinese &amp; English)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%E8%AF%AD%E6%B3%95-heading-syntax"><span class="nav-number">2.1.</span> <span class="nav-text">1. 标题语法 Heading Syntax</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98-heading-1"><span class="nav-number">3.</span> <span class="nav-text">一级标题 Heading 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98-heading-2"><span class="nav-number">3.1.</span> <span class="nav-text">二级标题 Heading 2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98-heading-3"><span class="nav-number">3.1.1.</span> <span class="nav-text">三级标题 Heading 3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%E4%B8%8E%E6%8D%A2%E8%A1%8C-paragraph-line-break"><span class="nav-number">3.2.</span> <span class="nav-text">2. 段落与换行 Paragraph &amp;
+Line Break</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F-text-styling"><span class="nav-number">3.3.</span> <span class="nav-text">3. 文本样式 Text Styling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8-unordered-list"><span class="nav-number">3.4.</span> <span class="nav-text">4. 无序列表 Unordered List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8-ordered-list"><span class="nav-number">3.5.</span> <span class="nav-text">5. 有序列表 Ordered List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97-blockquote"><span class="nav-number">3.6.</span> <span class="nav-text">6. 引用块 Blockquote</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81-inline-code"><span class="nav-number">3.7.</span> <span class="nav-text">7. 行内代码 Inline Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97-code-block"><span class="nav-number">3.8.</span> <span class="nav-text">8. 代码块 Code Block</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5-hyperlink"><span class="nav-number">3.9.</span> <span class="nav-text">9. 超链接 Hyperlink</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5-image-insert"><span class="nav-number">3.10.</span> <span class="nav-text">10. 图片插入 Image Insert</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%89%B2%E7%BA%BF-horizontal-rule"><span class="nav-number">3.11.</span> <span class="nav-text">11. 分割线 Horizontal Rule</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC-table"><span class="nav-number">3.12.</span> <span class="nav-text">12. 表格 Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8-task-list"><span class="nav-number">3.13.</span> <span class="nav-text">13. 任务列表 Task List</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%B4%B4%E5%A3%AB-blog-tips%E4%B8%AD%E8%8B%B1%E5%8F%8C%E8%AF%AD"><span class="nav-number">4.</span> <span class="nav-text">博客使用小贴士 Blog
+Tips（中英双语）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E6%96%87"><span class="nav-number">4.1.</span> <span class="nav-text">中文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#english"><span class="nav-number">4.2.</span> <span class="nav-text">English</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="small_inkfish"
+      src="https://avatars.githubusercontent.com/u/176222372?v=4&size=64">
+  <p class="site-author-name" itemprop="name">small_inkfish</p>
+  <div class="site-description" itemprop="description">Welcome!</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/smallinkfish1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;smallinkfish1" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/1382198536?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;1382198536?spm_id_from&#x3D;333.1007.0.0" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
+  </div>
+<div class="card-widget card-clock" style="padding:12px 16px;margin-bottom:16px;background:var(--card-bg);border-radius:8px;">
+  <div class="item-headline">
+    <i class="fas fa-clock"></i>
+    <span>实时时间</span>
+  </div>
+  <div id="clock-date" style="font-size:15px;margin:8px 0;"></div>
+  <div id="clock-time" style="font-size:24px;font-weight:bold;margin:8px 0;letter‑spacing:2px;"></div>
+</div>
+
+<script>
+function updateClock(){
+  const now = new Date();
+  const weekArr = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+  const year = now.getFullYear();
+  const month = String(now.getMonth()+1).padStart(2,"0");
+  const day = String(now.getDate()).padStart(2,"0");
+  const week = weekArr[now.getDay()];
+
+  const hh = String(now.getHours()).padStart(2,"0");
+  const mm = String(now.getMinutes()).padStart(2,"0");
+  const ss = String(now.getSeconds()).padStart(2,"0");
+
+  document.getElementById("clock-date").innerText = `${year}‑${month}‑${day} ${week}`;
+  document.getElementById("clock-time").innerText = `${hh}:${mm}:${ss}`;
+}
+updateClock();
+// 每秒刷新
+setInterval(updateClock,1000);
+</script>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/09/05/Markdown_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/176222372?v=4&size=64">
+      <meta itemprop="name" content="small_inkfish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo Website">
+      <meta itemprop="description" content="Welcome!">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Markdown 基础语法（中英双语） | Hexo Website">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Markdown 基础语法（中英双语）<a href="/undefined_posts/Markdown_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.md" class="post-edit-link" title="编辑"><i class="fa fa-pen-nib"></i></a>
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-09-05 21:00:00" itemprop="dateCreated datePublished" datetime="2026-09-05T21:00:00+08:00">2026-09-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-09-06 12:51:46" itemprop="dateModified" datetime="2026-09-06T12:51:46+08:00">2026-09-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="markdown-基础语法完全指南中英双语">Markdown
+基础语法完全指南（中英双语）</h1>
+<h1 id="complete-basic-markdown-syntax-guide-chinese-english">Complete
+Basic Markdown Syntax Guide (Chinese &amp; English)</h1>
+<p>本文整理全部通用 Markdown
+基础语法，所有示例均可直接复制到博客使用，适配绝大多数主题渲染。 This
+article sorts out all basic Markdown syntax. All examples can be copied
+and used directly.</p>
+<hr />
+<h2 id="标题语法-heading-syntax">1. 标题语法 Heading Syntax</h2>
+<p>用于区分文章层级，共支持 <strong>1–6 级标题</strong>。 Used for
+article hierarchy, supports level 1 to 6.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题 Heading 1</span></span><br><span class="line"><span class="section">## 二级标题 Heading 2</span></span><br><span class="line"><span class="section">### 三级标题 Heading 3</span></span><br><span class="line"><span class="section">#### 四级标题 Heading 4</span></span><br><span class="line"><span class="section">##### 五级标题 Heading 5</span></span><br><span class="line"><span class="section">###### 六级标题 Heading 6</span></span><br></pre></td></tr></table></figure>
+<p>渲染效果 Preview：</p>
+<h1 id="一级标题-heading-1">一级标题 Heading 1</h1>
+<h2 id="二级标题-heading-2">二级标题 Heading 2</h2>
+<h3 id="三级标题-heading-3">三级标题 Heading 3</h3>
+<blockquote>
+<p>规则：<code>#</code> 与文字之间<strong>必须有空格</strong> Rule:
+Always add a space after <code>#</code></p>
+</blockquote>
+<hr />
+<h2 id="段落与换行-paragraph-line-break">2. 段落与换行 Paragraph &amp;
+Line Break</h2>
+<p>普通文字直接书写即为段落。 Plain text forms a paragraph directly.</p>
+<ul>
+<li><p><strong>换行（软换行）</strong>：行尾两个空格 + 回车 Soft line
+break: two spaces + enter</p></li>
+<li><p><strong>换段（新段落）</strong>：直接空一行 New paragraph: leave
+one blank line</p></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是第一段文字 First paragraph  </span><br><span class="line"></span><br><span class="line">这是第二段文字 Second paragraph</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="文本样式-text-styling">3. 文本样式 Text Styling</h2>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**加粗 Bold**</span></span><br><span class="line"><span class="emphasis">*斜体 Italic*</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗斜体 Bold &amp; Italic*</span>**</span></span><br><span class="line">~~删除线 Strikethrough~~</span><br><span class="line">==高亮 Highlight==</span><br></pre></td></tr></table></figure>
+<p>效果 Preview： <strong>加粗 Bold</strong> <em>斜体 Italic</em>
+<strong><em>粗斜体 Bold &amp; Italic</em></strong> <del>删除线
+Strikethrough</del> == 高亮 Highlight==</p>
+<hr />
+<h2 id="无序列表-unordered-list">4. 无序列表 Unordered List</h2>
+<p>使用 <code>-</code> <code>+</code> <code>*</code>
+均可，符号后加空格。 Use <code>-</code> / <code>+</code> /
+<code>*</code> with a space.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 项目一 Item one</span><br><span class="line"><span class="bullet">-</span> 项目二 Item two</span><br><span class="line"><span class="bullet">-</span> 项目三 Item three</span><br><span class="line"><span class="bullet">    -</span> 子项目 Sub item</span><br></pre></td></tr></table></figure>
+<p>效果 Preview：</p>
+<ul>
+<li><p>项目一 Item one</p></li>
+<li><p>项目二 Item two</p></li>
+<li><p>项目三 Item three</p>
+<ul>
+<li>子项目 Sub item</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="有序列表-ordered-list">5. 有序列表 Ordered List</h2>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一条内容 First item</span><br><span class="line"><span class="bullet">2.</span> 第二条内容 Second item</span><br><span class="line"><span class="bullet">3.</span> 第三条内容 Third item</span><br></pre></td></tr></table></figure>
+<p>效果 Preview：</p>
+<ol type="1">
+<li><p>第一条内容 First item</p></li>
+<li><p>第二条内容 Second item</p></li>
+<li><p>第三条内容 Third item</p></li>
+</ol>
+<hr />
+<h2 id="引用块-blockquote">6. 引用块 Blockquote</h2>
+<p>用于引用、备注、重点提示。 For quotes, notes and tips.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 单行引用 Single quote</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; 多行引用 Multi-line quote</span></span><br><span class="line"><span class="quote">&gt; 第二行内容 Second line</span></span><br></pre></td></tr></table></figure>
+<p>效果 Preview：</p>
+<blockquote>
+<p>单行引用 Single quote</p>
+</blockquote>
+<blockquote>
+<p>多行引用 Multi-line quote 第二行内容 Second line</p>
+</blockquote>
+<hr />
+<h2 id="行内代码-inline-code">7. 行内代码 Inline Code</h2>
+<p>适合标注命令、关键词、代码单词。 For commands, keywords and code
+words.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请使用 <span class="code">`hugo server`</span> 本地预览  </span><br><span class="line">Use <span class="code">`hugo server`</span> for local preview</span><br></pre></td></tr></table></figure>
+<p>效果 Preview： 请使用 <code>hugo server</code> 本地预览 Use
+<code>hugo server</code> for local preview</p>
+<hr />
+<h2 id="代码块-code-block">8. 代码块 Code Block</h2>
+<p>支持<strong>指定语言高亮</strong>，博客最常用语法。 Support syntax
+highlighting with language tags.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```bash</span></span><br><span class="line"><span class="code"># 启动本地博客 Start local server</span></span><br><span class="line"><span class="code">hugo server</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python 示例代码 Python example</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Markdown&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">效果 Preview：</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line"># 启动本地博客 Start local server</span><br><span class="line">hugo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python 示例代码 Python example</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello Markdown&quot;</span>)</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="超链接-hyperlink">9. 超链接 Hyperlink</h2>
+<p>语法 Syntax：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">链接文字 Link Text</span>](<span class="link">链接地址 URL</span>)</span><br></pre></td></tr></table></figure>
+<p>示例 Example：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">我的个人博客 My Blog</span>](<span class="link">https://username.github.io</span>)</span><br></pre></td></tr></table></figure>
+<p>效果 Preview： <a target="_blank" rel="noopener" href="https://username.github.io">我的个人博客 My
+Blog</a></p>
+<hr />
+<h2 id="图片插入-image-insert">10. 图片插入 Image Insert</h2>
+<p>语法 Syntax：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片描述 Image Alt Text</span>](<span class="link">图片路径 Image Path</span>)</span><br></pre></td></tr></table></figure>
+<p>示例 Example：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">博客示例图 Blog Demo Image</span>](<span class="link">/img/demo.png</span>)</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="分割线-horizontal-rule">11. 分割线 Horizontal Rule</h2>
+<p>三种写法等效 Three equivalent ways：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"><span class="strong">***</span></span></span><br><span class="line"><span class="strong"><span class="section">---</span></span></span><br><span class="line"><span class="strong"><span class="section">__<span class="emphasis">_</span></span></span></span><br></pre></td></tr></table></figure>
+<p>效果 Preview：</p>
+<hr />
+<hr />
+<h2 id="表格-table">12. 表格 Table</h2>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 中文表头 Chinese | 英文表头 English |</span><br><span class="line">| ---- | ---- |</span><br><span class="line">| 内容 Content | Text |</span><br><span class="line">| 表格单元格 Table Cell | Data |</span><br></pre></td></tr></table></figure>
+<p>效果 Preview：</p>
+<table>
+<thead>
+<tr class="header">
+<th>中文表头 Chinese</th>
+<th>英文表头 English</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>内容 Content</td>
+<td>Text</td>
+</tr>
+<tr class="even">
+<td>表格单元格 Table Cell</td>
+<td>Data</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="任务列表-task-list">13. 任务列表 Task List</h2>
+<p>适合写计划、进度、待办。 For plans, progress and todos.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [x] 已完成任务 Completed task</span><br><span class="line"><span class="bullet">-</span> [ ] 未完成任务 Pending task</span><br></pre></td></tr></table></figure>
+<p>效果 Preview：</p>
+<ul class="task-list">
+<li><p><label><input type="checkbox" checked="" />已完成任务 Completed
+task</label></p></li>
+<li><p><label><input type="checkbox" />未完成任务 Pending
+task</label></p></li>
+</ul>
+<hr />
+<h1 id="博客使用小贴士-blog-tips中英双语">博客使用小贴士 Blog
+Tips（中英双语）</h1>
+<h2 id="中文">中文</h2>
+<ol type="1">
+<li><p>所有博客文章必须放在 <code>content/posts/</code> 目录</p></li>
+<li><p><code>draft: true</code> 为草稿，线上不会显示，发布务必改为
+<code>false</code></p></li>
+<li><p>所有语法 Hugo + PaperMod 完全兼容</p></li>
+<li><p>文件名建议英文小写、不含空格</p></li>
+</ol>
+<h2 id="english">English</h2>
+<ol type="1">
+<li><p>All posts should be placed in
+<code>content/posts/</code></p></li>
+<li><p>Set <code>draft: false</code> before publishing</p></li>
+<li><p>All syntax is fully compatible with Hugo &amp; PaperMod</p></li>
+<li><p>Use lowercase English filenames without spaces</p></li>
+</ol>
+<hr />
+<p><strong>结语 Conclusion</strong> 以上就是日常写博客用到的
+<strong>100% 全部常用 Markdown
+语法</strong>，熟练掌握即可写出排版精致、结构清晰的技术博客。 These are
+all commonly-used Markdown syntax for blogging. Master them to build
+clean and elegant articles.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>small_inkfish
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2026/09/05/Markdown_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="Markdown 基础语法（中英双语）">http://example.com/2026/09/05/Markdown_基础语法/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://space.bilibili.com/1382198536?spm_id_from=333.1007.0.0">
+            <span class="icon">
+              <i class="fa fa-bilibili"></i>
+            </span>
+
+            <span class="label">Bilibili</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Notes/" rel="tag"><i class="fa fa-tag"></i> Notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/09/05/My-New-Post/" rel="prev" title="Pattern">
+                  <i class="fa fa-angle-left"></i> Pattern
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/09/05/High_School_Physics_Formula_Collection_(Chinese_/" rel="next" title="高中物理公式演示 (中文 &amp; English)">
+                  高中物理公式演示 (中文 & English) <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>简体中文</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="" aria-label="选择语言">
+      
+        <option value="zh-CN" data-href="/2026/09/05/Markdown_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" selected="">
+          简体中文
+        </option>
+      
+        <option value="en" data-href="/en/2026/09/05/Markdown_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" selected="">
+          English
+        </option>
+      
+    </select>
+  </div>
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">small_inkfish</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/smallinkfish1" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+</body>
+</html>
